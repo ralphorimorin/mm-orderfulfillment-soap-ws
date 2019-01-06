@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xs:schema xmlns:tns="http://mm.io/meetup/productcategory-ws" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://mm.io/meetup/productcategory-ws">
+
+    <xs:element name="getProductCategoriesRequest">
+        <xs:complexType>
+            <xs:sequence maxOccurs="1" minOccurs="0">
+            	<xs:element name="searchBy" type="xs:string"/>
+            	<xs:element name="id" type="xs:string"/>
+                <xs:element name="name" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getProductCategoriesResponse">
+        <xs:complexType>
+            <xs:sequence maxOccurs="unbounded" minOccurs="0">
+                <xs:element name="productCategories" type="tns:productCategory"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="productCategory">
+        <xs:sequence>
+            <xs:element name="categoryId" type="xs:string"/>
+            <xs:element name="categoryName" type="xs:string"/>
+            <xs:element name="description" type="xs:string"/>
+            <xs:element name="picture" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

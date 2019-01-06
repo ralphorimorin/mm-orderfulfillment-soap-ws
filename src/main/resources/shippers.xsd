@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xs:schema xmlns:tns="http://mm.io/meetup/shipper-ws" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://mm.io/meetup/shipper-ws">
+
+    <xs:element name="getShippersRequest">
+        <xs:complexType>
+            <xs:sequence maxOccurs="1" minOccurs="0">
+            	<xs:element name="searchBy" type="xs:string"/>
+            	<xs:element name="id" type="xs:string"/>
+                <xs:element name="companyName" type="xs:string"/>
+                <xs:element name="phone" type="xs:long"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getShippersResponse">
+        <xs:complexType>
+            <xs:sequence maxOccurs="unbounded" minOccurs="0">
+                <xs:element name="shippers" type="tns:shipper"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="shipper">
+        <xs:sequence>
+            <xs:element name="shipperId" type="xs:string"/>
+            <xs:element name="companyName" type="xs:string"/>
+            <xs:element name="phone" type="xs:long"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

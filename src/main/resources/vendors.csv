@@ -1,0 +1,11 @@
+vendorId,vendorName,street,city,state,country,zipCode,phone
+VEND-1,VEND-name-1,str-1,cit-1,state-1,count-1,1111,1111111111
+VEND-2,VEND-name-2,str-2,cit-2,state-2,count-2,1112,2222222222
+VEND-3,VEND-name-3,str-3,cit-3,state-3,count-3,1113,3333333333
+VEND-4,VEND-name-4,str-4,cit-4,state-4,count-4,1114,4444444444
+VEND-5,VEND-name-5,str-5,cit-5,state-5,count-5,1115,5555555555
+VEND-6,VEND-name-6,str-6,cit-6,state-6,count-6,1116,6666666666
+VEND-7,VEND-name-7,str-7,cit-7,state-7,count-7,1117,7777777777
+VEND-8,VEND-name-8,str-8,cit-8,state-8,count-8,1118,8888888888
+VEND-9,VEND-name-9,str-9,cit-9,state-9,count-9,1119,9999999999
+VEND-10,VEND-name-10,str-10,cit-10,state-10,count-10,1110,1111111110

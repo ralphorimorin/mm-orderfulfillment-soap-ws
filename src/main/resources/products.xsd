@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xs:schema xmlns:tns="http://mm.io/meetup/product-ws" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://mm.io/meetup/product-ws">
+
+    <xs:element name="getProductListRequest">
+        <xs:complexType>
+            <xs:sequence maxOccurs="1" minOccurs="0">
+            	<xs:element name="searchBy" type="xs:string"/>
+            	<xs:element name="id" type="xs:string"/>
+                <xs:element name="name" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getProductListResponse">
+        <xs:complexType>
+            <xs:sequence maxOccurs="unbounded" minOccurs="0">
+                <xs:element name="product" type="tns:product"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="product">
+        <xs:sequence>
+            <xs:element name="productId" type="xs:string"/>
+            <xs:element name="sku" type="xs:string"/>
+            <xs:element name="productName" type="xs:string"/>
+            <xs:element name="description" type="xs:string"/>
+            <xs:element name="vendorId" type="xs:string"/>
+            <xs:element name="categoryId" type="xs:string"/>
+            <xs:element name="salePrice" type="xs:double"/>
+            <xs:element name="qtyInStock" type="xs:int"/>
+            <xs:element name="qtyInOrder" type="xs:int"/>
+            <xs:element name="active" type="xs:boolean"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
